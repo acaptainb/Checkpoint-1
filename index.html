@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="style.css">
     <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
         defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    </style>
+    <!-- FIXME missing the font import for our custom google font. Go back to fonts.google and look for that separate link tag -->
 
 </head>
 
@@ -68,31 +72,31 @@
 
         <section class="container-fluid bg-primary">
             <div class="row justify-content-center p-5 mb-5">
-                <div class="col-10 col-md-4 ">
-                    <div class="order-1 order-md-2">
-                        <h3 class="shadows-into-light-regular">Lorem ipsum dolor sit amet.
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat illum at commodi
-                            delectus earum minima debitis numquam reiciendis, iusto distinctio quos amet veniam
-                            nam
-                            omnis magnam doloremque quae excepturi quas.</p>
-                    </div>
+                <!-- FIXME Order should be added to the direct children of rows (d-flex) -->
+                <div class="col-10 col-md-4 order-2 order-md-1 pt-5">
+
+                    <h3 class="shadows-into-light-regular">Lorem ipsum dolor sit amet.
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat illum at commodi
+                        delectus earum minima debitis numquam reiciendis, iusto distinctio quos amet veniam
+                        nam
+                        omnis magnam doloremque quae excepturi quas.</p>
+
                 </div>
 
-                <div class=" col-10 col-md-6 position-inherit ">
-                    <div class="d-flex p-3 magic-card  ">
-                        <div class="mb-2 d-flex flex-row flex-md-column">
-                            <div class="order-md-1 order-2">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minima optio
-                                    animi
-                                    dolor tempore
-                                    voluptatibus ab fugit et quibusdam repellat dolorem, fuga at quas facilis illo
-                                    qui
-                                    est
-                                    maxime tenetur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
-                                    blanditiis natus ea.
-                                </p>
-                            </div>
+                <div class=" col-10 col-md-6 position-inherit order-md-2 order-1">
+                    <!-- FIXME card should only spill on medium or larger screens. How can we "turn on" a class based on screen size, so the spill only applies for medium and larger screens? (Thursday lecture Reference) -->
+                    <div class="d-flex p-5 magic-card mb-5 ">
+                        <div class="mb-5 d-flex flex-column flex-md-row">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minima optio
+                                animi
+                                dolor tempore
+                                voluptatibus ab fugit et quibusdam repellat dolorem, fuga at quas facilis illo
+                                qui
+                                est
+                                maxime tenetur? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                                blanditiis natus ea.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -154,15 +158,16 @@
 
         <section class="container-fluid">
             <div class="row text-center justify-content-center align-items-center py-5 ">
-                <div class=" col-10 col-md-3 border m-2 shadow">
+                <!-- FIXME order change based on screen size. Large card should come first -->
+                <div class=" col-10 col-md-3 border m-2 shadow order-2 order-md-3">
                     <i class="mdi mdi-format-quote-open fs-2"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Explicabo, magnam qui. <br>
+                    <p>Larem ipsum dolor sit amet consectetur, <br> adipisicing elit. Explicabo, magnam qui. <br>
                         Temporibus,
                         quisquam! Repellat eaque sed <br>minima dignissimos facilis voluptates.</p>
 
                     <p class="text-primary">Reviewed <br>by <strong>Jack Reacher</strong></p>
                 </div>
-                <div class=" col-10 col-md-3 border mb-2 shadow middle-card ">
+                <div class=" col-10 col-md-3 border mb-2 shadow middle-card order-1 order-md-2 ">
                     <i class=" fs-1 mdi mdi-star-circle text-warning"> <br></i>
                     <i class="mdi mdi-format-quote-open fs-2"></i>
                     <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Explicabo, magnam qui. <br>
@@ -171,7 +176,7 @@
 
                     <p class="text-primary">Reviewed <br>by <strong>Jack Reacher</strong></p>
                 </div>
-                <div class="col-10 col-md-3 border m-2 shadow ">
+                <div class="col-10 col-md-3 border m-2 shadow order-3 order-md-1">
                     <i class="mdi mdi-format-quote-open fs-2"></i>
                     <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Explicabo, magnam qui. <br>
                         Temporibus,
